@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analytics Visualization</title>
+    <!-- Include necessary CSS or libraries for your charts -->
+    <!-- Example: -->
+    <!-- Include Chart.js library (you need to download it or use a CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Data Analytics Visualization</h1>
+
+    <!-- Summary Statistics for Numeric Columns -->
+    <h2>Summary Statistics for Numeric Columns</h2>
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>Count</th>
+            <th>Mean</th>
+            <th>Std</th>
+            <th>Min</th>
+            <th>25%</th>
+            <th>50%</th>
+            <th>75%</th>
+            <th>Max</th>
+        </tr>
+        <tr>
+            <td>Parking Duration Minutes</td>
+            <td>1000</td> <!-- Example count -->
+            <td>45.6</td> <!-- Example mean -->
+            <td>10.2</td> <!-- Example std -->
+            <td>20.5</td> <!-- Example min -->
+            <td>35.5</td> <!-- Example 25% -->
+            <td>45.0</td> <!-- Example 50% -->
+            <td>54.2</td> <!-- Example 75% -->
+            <td>70.0</td> <!-- Example max -->
+        </tr>
+        <!-- Add rows for other numeric columns as needed -->
+    </table>
+
+    <!-- Charts -->
+    <h2>Data Visualizations</h2>
+
+    <div id="chart1">
+        <canvas id="chart1Canvas"></canvas>
+    </div>
+    <div id="chart2">
+        <canvas id="chart2Canvas"></canvas>
+    </div>
+    <div id="chart3">
+        <canvas id="chart3Canvas"></canvas>
+    </div>
+    <div id="chart4">
+        <canvas id="chart4Canvas"></canvas>
+    </div>
+    <!-- Add div elements for other charts as needed -->
+
+    <script>
+        // You can use JavaScript to populate your charts with data
+        // Example: Use Chart.js to create charts and populate them with data.
+        // Below is a placeholder example.
+
+        // Chart 1 - Bar Chart: Mean Parking Duration by Location
+        var ctx1 = document.getElementById('chart1Canvas').getContext('2d');
+        var chart1 = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Location 1', 'Location 2', 'Location 3'],
+                datasets: [{
+                    label: 'Mean Parking Duration (Minutes)',
+                    data: [32.4, 44.8, 55.2], // Example data
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Chart 2 - Bar Chart: Mean Parking Fee by Location
+        var ctx2 = document.getElementById('chart2Canvas').getContext('2d');
+        var chart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Location 1', 'Location 2', 'Location 3'],
+                datasets: [{
+                    label: 'Mean Parking Fee (LKR)',
+                    data: [120.5, 95.2, 142.8], // Example data
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        }
+
+        // Add JavaScript code to populate other charts as needed.
+    </script>
+</body>
+</html>
 
