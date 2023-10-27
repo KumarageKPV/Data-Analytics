@@ -12,13 +12,15 @@
     <div id="chart2"></div>
     <div id="chart3"></div>
     <div id="chart4"></div>
+    <div id="chart5"></div> <!-- New chart for the bar chart -->
+    <div id="chart6"></div> <!-- New chart for the histogram -->
+    <!-- Add more div elements for new charts -->
 
     <script>
         // JavaScript code to populate your charts with data
         // Replace this with the actual data and charting code
-        // Example: Use Plotly.js, Chart.js, or other charting libraries
 
-        // Chart 1
+        // Chart 1 - Bar Chart (Example)
         var data1 = [
             {
                 x: ['Location 1', 'Location 2', 'Location 3'],
@@ -36,7 +38,76 @@
 
         Plotly.newPlot('chart1', data1, layout1);
 
-        // Add JavaScript code to populate other charts as needed.
+        // Chart 2 - Scatter Plot (Example)
+        var data2 = [
+            {
+                x: [1, 2, 3, 4, 5],
+                y: [10, 11, 8, 12, 9],
+                mode: 'markers',
+                type: 'scatter',
+                name: 'Sample Data'
+            }
+        ];
+
+        var layout2 = {
+            title: 'Scatter Plot Example',
+            xaxis: { title: 'X-Axis' },
+            yaxis: { title: 'Y-Axis' }
+        };
+
+        Plotly.newPlot('chart2', data2, layout2);
+
+        // Chart 3 - Pie Chart (Example)
+        var data3 = [
+            {
+                labels: ['Category A', 'Category B', 'Category C'],
+                values: [25, 40, 35],
+                type: 'pie'
+            }
+        ];
+
+        var layout3 = {
+            title: 'Pie Chart Example'
+        };
+
+        Plotly.newPlot('chart3', data3, layout3);
+
+        // Chart 4 - Bar Chart (Example)
+        var data4 = [
+            {
+                x: ['Category 1', 'Category 2', 'Category 3'],
+                y: [15, 30, 45],
+                type: 'bar',
+                name: 'Bar Chart Example'
+            }
+        ];
+
+        var layout4 = {
+            title: 'Bar Chart Example',
+            xaxis: { title: 'Categories' },
+            yaxis: { title: 'Values' }
+        };
+
+        Plotly.newPlot('chart4', data4, layout4);
+
+        // Chart 5 - Histogram (Example)
+        var data5 = [
+            {
+                x: [3, 4, 4, 5, 6, 6, 6, 7, 7, 7, 8, 8, 9, 9, 10],
+                type: 'histogram',
+                name: 'Histogram Example'
+            }
+        ];
+
+        var layout5 = {
+            title: 'Histogram Example',
+            xaxis: { title: 'Values' },
+            yaxis: { title: 'Frequency' }
+        };
+
+        Plotly.newPlot('chart5', data5, layout5);
+
+        // Chart 6 (Add your code to populate this chart)
     </script>
 </body>
 </html>
