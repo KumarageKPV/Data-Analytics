@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analytics Visualization</title>
+    <!-- Include necessary CSS or libraries for your charts -->
+    <!-- Example: -->
+    <!-- <link rel="stylesheet" href="your-chart-library.css"> -->
+</head>
+<body>
+    <h1>Data Analytics Visualization</h1>
+
+    <!-- Summary Statistics for Numeric Columns -->
+    <h2>Summary Statistics for Numeric Columns</h2>
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>Count</th>
+            <th>Mean</th>
+            <th>Std</th>
+            <th>Min</th>
+            <th>25%</th>
+            <th>50%</th>
+            <th>75%</th>
+            <th>Max</th>
+        </tr>
+        <tr>
+            <td>Parking Duration Minutes</td>
+            <td>Place actual count here</td>
+            <td>Place actual mean here</td>
+            <td>Place actual std here</td>
+            <td>Place actual min here</td>
+            <td>Place actual 25% here</td>
+            <td>Place actual 50% here</td>
+            <td>Place actual 75% here</td>
+            <td>Place actual max here</td>
+        </tr>
+        <!-- Add rows for other numeric columns as needed -->
+    </table>
+
+    <!-- Charts -->
+    <h2>Data Visualizations</h2>
+
+    <div id="chart1"></div>
+    <div id="chart2"></div>
+    <div id="chart3"></div>
+    <div id="chart4"></div>
+    <!-- Add div elements for other charts as needed -->
+
+    <!-- Include necessary JavaScript libraries for your charts -->
+    <!-- Example: -->
+    <!-- <script src="your-chart-library.js"></script> -->
+
+    <script>
+        // You can use JavaScript to populate your charts with data
+        // Example: Use a JavaScript charting library to create charts and populate them with data.
+        // For example, you can use Chart.js, Highcharts, or D3.js.
+        // Refer to the documentation of the charting library you choose for more details on how to create charts.
+        // Below is a placeholder example.
+
+        // Chart 1 - Bar Chart: Mean Parking Duration by Location
+        var ctx1 = document.getElementById('chart1').getContext('2d');
+        var chart1 = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Location 1', 'Location 2', 'Location 3'],
+                datasets: [{
+                    label: 'Mean Parking Duration (Minutes)',
+                    data: [/* Place actual data here */],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Chart 2 - Bar Chart: Mean Parking Fee by Location
+        var ctx2 = document.getElementById('chart2').getContext('2d');
+        var chart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Location 1', 'Location 2', 'Location 3'],
+                datasets: [{
+                    label: 'Mean Parking Fee (LKR)',
+                    data: [/* Place actual data here */],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Add JavaScript code to populate other charts as needed.
+    </script>
+</body>
+</html>
