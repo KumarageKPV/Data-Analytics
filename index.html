@@ -24,6 +24,22 @@
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #0074D9;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +54,50 @@
     <div class="chart" id="chart6"></div> <!-- New chart for the histogram -->
     <!-- Add more div elements for new charts -->
 
+    <!-- Table for displaying data -->
+    <div class="chart" id="table-container">
+        <h2>Data Table</h2>
+        <table>
+            <tr>
+                <th>Slot ID</th>
+                <th>Availability</th>
+                <th>Location</th>
+                <th>Address</th>
+                <th>Zone</th>
+                <th>Occupancy Status</th>
+                <th>Parking Duration Minutes</th>
+                <th>Last Update</th>
+                <th>Parking Fee LKR</th>
+                <th>User ID</th>
+                <th>Reservation Start Time</th>
+                <th>Reservation End Time</th>
+                <th>Reservation Start Date</th>
+                <th>Reservation End Date</th>
+                <th>Username</th>
+                <th>User email</th>
+            </tr>
+            <tr>
+                <td>SPOT-1</td>
+                <td>1</td>
+                <td>Parking Lot 6</td>
+                <td>123 Main St, City 3</td>
+                <td>Zone 1</td>
+                <td>Reserved</td>
+                <td>986</td>
+                <td>2023-10-23 16:59:57.471713</td>
+                <td>405.762770</td>
+                <td>User-1</td>
+                <td>2023-10-26 14:23:57.471713</td>
+                <td>2023-10-27 19:47:57.471713</td>
+                <td>2023-10-26</td>
+                <td>2023-10-27</td>
+                <td>User 1</td>
+                <td>user1@example.com</td>
+            </tr>
+            <!-- Add more rows for data -->
+        </table>
+    </div>
+
     <script>
         // JavaScript code to populate your charts with data
         // Replace this with the actual data and charting code
@@ -48,7 +108,10 @@
                 x: ['Location 1', 'Location 2', 'Location 3'],
                 y: [32.4, 44.8, 55.2],
                 type: 'bar',
-                name: 'Mean Parking Duration (Minutes)'
+                name: 'Mean Parking Duration (Minutes)',
+                marker: {
+                    color: ['#FF5733', '#FFD700', '#00FF00'], // Different colors for bars
+                },
             }
         ];
 
@@ -100,7 +163,10 @@
                 x: ['Category 1', 'Category 2', 'Category 3'],
                 y: [15, 30, 45],
                 type: 'bar',
-                name: 'Bar Chart Example'
+                name: 'Bar Chart Example',
+                marker: {
+                    color: ['#FF5733', '#FFD700', '#00FF00'], // Different colors for bars
+                },
             }
         ];
 
@@ -117,7 +183,10 @@
             {
                 x: [3, 4, 4, 5, 6, 6, 6, 7, 7, 7, 8, 8, 9, 9, 10],
                 type: 'histogram',
-                name: 'Histogram Example'
+                name: 'Histogram Example',
+                marker: {
+                    color: '#0074D9', // Color for the histogram
+                },
             }
         ];
 
